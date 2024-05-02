@@ -2,6 +2,11 @@ import ProjectItem from "@/components/project-link";
 import { reader } from "@/lib/reader/reader";
 import React from "react";
 
+export async function generateStaticParams() {
+  const projects = await reader.collections.projects.list();
+  return projects.map((project) => ({ slug: project }));
+}
+
 async function ProjectsPage() {
   const projects = await reader.collections.projects.all();
 
