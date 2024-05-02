@@ -21,8 +21,8 @@ async function ProjectsPage() {
   return (
     <main>
       <ul>
-        {projectList?.map((project) => (
-          <ProjectItem project={project} />
+        {projectList?.map((project,i) => (
+          <ProjectItem project={project} key={i} />
         ))}
       </ul>
     </main>
