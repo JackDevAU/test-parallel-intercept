@@ -36,6 +36,9 @@ export default function ProjectDialog({
   const [open, setOpen] = React.useState(true);
   const { back } = useRouter();
 
+console.log('❌ THIS IS CALLED?');
+
+
   const onOpenChange = () => {
     setOpen(!open);
     back();
