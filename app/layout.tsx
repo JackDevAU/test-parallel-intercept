@@ -1,4 +1,4 @@
-import './global.css';
+import './globals.css';
 
 export const metadata = {
   title: 'NextGram',
@@ -16,7 +16,6 @@ export default function RootLayout(props: {
       <body>
         {props.children}
         {props.modal}
-        <div id="modal-root" />
       </body>
     </html>
   );
