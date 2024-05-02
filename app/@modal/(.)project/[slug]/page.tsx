@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 
 export default async function page({ params }: { params: { slug: string } }) {
   const project = await reader.collections.projects.read(params.slug);
-console.log(reader === undefined);
+console.log(!!reader);
 
   if(!project) 
     return null;
