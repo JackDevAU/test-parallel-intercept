@@ -9,12 +9,12 @@ export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project }));
 }
 
-
 export default async function page({ params }: { params: { slug: string } }) {
   const project = await reader.collections.projects.read(params.slug);
+console.log(reader === undefined);
 
   if(!project) 
-    return notFound();
+    return null;
 
   const readContext = await project.content();
   // const { default: Content } = await processMdx(readContext);
