@@ -8,8 +8,13 @@ type ProjectItemProps = {
 
 export default function ProjectItem({ project }: ProjectItemProps) {
   return (
-    <Link href={`/project/${project.slug}`}>
-      <li key={project.slug}>{project.entry.title}</li>
+    <Link
+      className="card"
+      key={project.slug}
+      href={`/project/${project.slug}`}
+      passHref
+    >
+      {project.entry.title}
     </Link>
   );
 }
