@@ -1,7 +1,6 @@
 
 import ProjectDialog from "@/components/project-dialog";
 import { reader } from "@/lib/reader/reader";
-import { notFound } from "next/navigation";
 import React from "react";
 
 export async function generateStaticParams() {
